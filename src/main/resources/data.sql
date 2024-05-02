@@ -1,5 +1,8 @@
 -- CREATE DATABASE IF NOT EXISTS recipes;
-USE recipes;
+USE aym_db;
+
+INSERT INTO color (color_name) VALUES ('blue');
+INSERT INTO color (color_name) VALUES ('red');
 
 INSERT INTO categories (name, created, edited) VALUES ('Vegetar',NOW(),NOW());
 INSERT INTO categories (name, created, edited) VALUES ('Høne',NOW(),NOW());
