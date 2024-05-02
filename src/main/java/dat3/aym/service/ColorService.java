@@ -36,6 +36,9 @@ public class ColorService {
         return new ColorDto(color);
     }
 
-
+    //Create color
+    public Color createColor(Color color) {
+        return colorRepository.save(color);
+    }
 
 }
