@@ -4,7 +4,9 @@ import dat3.aym.dto.ColorDto;
 import dat3.aym.entity.Color;
 import dat3.aym.repository.ColorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +17,7 @@ public class ColorService {
     @Autowired
     ColorRepository colorRepository;
 
-    //Get all equipment
+    //Get all colors
     public List<ColorDto> getAllColors() {
         List<Color> colorList = colorRepository.findAll();
         List<ColorDto> colorDtoList = new ArrayList<>();
@@ -26,4 +28,14 @@ public class ColorService {
 
         return colorDtoList;
     }
+
+    //Get color by id
+    public ColorDto getColorById(int id) {
+        Color color = colorRepository.findById(id).orElseThrow(() ->
+                new ResponseStatusException(HttpStatus.NOT_FOUND, "equipment not found"));
+        return new ColorDto(color);
+    }
+
+
+
 }
