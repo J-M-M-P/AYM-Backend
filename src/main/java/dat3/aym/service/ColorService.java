@@ -10,6 +10,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ColorService {
@@ -39,6 +40,33 @@ public class ColorService {
     //Create color
     public Color createColor(Color color) {
         return colorRepository.save(color);
+    }
+
+    //Delete color
+    public void deleteColor(int colorId) {
+        colorRepository.deleteById(colorId);
+    }
+
+    //Update color
+    public Color updateColor(int colorId, Color updatedColor) {
+        // Check if color with that ID exists in database
+        Optional<Color> existingColorOptional = colorRepository.findById(colorId);
+
+        if (existingColorOptional.isPresent()) {
+            // If color exists, update the rest of the properties
+            Color existingColor = existingColorOptional.get();
+            existingColor.setColorName(updatedColor.getColorName());
+            //existingEquipment.setStatus(updatedEquipment.isStatus());
+            //existingEquipment.setTotalUnits(updatedEquipment.getTotalUnits());
+            //existingEquipment.setDefectiveUnits(updatedEquipment.getDefectiveUnits());
+            //existingEquipment.setActivity(updatedEquipment.getActivity());
+
+            // Save updated color in database
+            return colorRepository.save(existingColor);
+        } else {
+            // If color does not exist in database, throw error
+            throw new RuntimeException("Equipment with ID: " + colorId + " not found");
+        }
     }
 
 }
