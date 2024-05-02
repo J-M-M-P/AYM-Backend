@@ -56,16 +56,12 @@ public class ColorService {
             // If color exists, update the rest of the properties
             Color existingColor = existingColorOptional.get();
             existingColor.setColorName(updatedColor.getColorName());
-            //existingEquipment.setStatus(updatedEquipment.isStatus());
-            //existingEquipment.setTotalUnits(updatedEquipment.getTotalUnits());
-            //existingEquipment.setDefectiveUnits(updatedEquipment.getDefectiveUnits());
-            //existingEquipment.setActivity(updatedEquipment.getActivity());
 
             // Save updated color in database
             return colorRepository.save(existingColor);
         } else {
             // If color does not exist in database, throw error
-            throw new RuntimeException("Equipment with ID: " + colorId + " not found");
+            throw new RuntimeException("Color with ID: " + colorId + " not found");
         }
     }
 
