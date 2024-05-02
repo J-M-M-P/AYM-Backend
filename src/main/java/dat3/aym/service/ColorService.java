@@ -32,7 +32,7 @@ public class ColorService {
     //Get color by id
     public ColorDto getColorById(int id) {
         Color color = colorRepository.findById(id).orElseThrow(() ->
-                new ResponseStatusException(HttpStatus.NOT_FOUND, "equipment not found"));
+                new ResponseStatusException(HttpStatus.NOT_FOUND, "color not found"));
         return new ColorDto(color);
     }
 
