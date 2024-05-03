@@ -18,7 +18,7 @@ public class Product {
     private String name;
     private double price;
     private String image;
-    private int qty; // ændret amount fra ER-dia til qty(quantity)
+    private int qty; // Ændret amount fra ER-dia til qty(quantity)
     private boolean onSale;
     private double discountPrice;
 
@@ -33,6 +33,8 @@ public class Product {
 //    // Foreign key relation til MATERIAL
 //    @OneToMany(mappedBy = "products")
 //    private Set<Material> material;
+//
+//    @ManyToMany(mappedBy = "")
 //
 //    // Many to many relation til order entitet
 //    @ManyToMany(mappedBy = "orders")
