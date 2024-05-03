@@ -1,4 +1,4 @@
-package dat3.recipe.configuration;
+package dat3.configuration;
 
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;

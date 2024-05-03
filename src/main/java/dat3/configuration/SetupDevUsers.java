@@ -1,11 +1,11 @@
-package dat3.recipe.configuration;
+package dat3.configuration;
 
 import dat3.security.entity.Role;
 import dat3.security.entity.UserWithRoles;
 import dat3.security.repository.RoleRepository;
-import dat3.security.repository.SpecialUserRepository;
+//import dat3.security.repository.SpecialUserRepository;
 import dat3.security.repository.UserWithRolesRepository;
-import dat3.recipe.entity.SpecialUser;
+//import dat3.recipe.entity.SpecialUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -16,10 +16,10 @@ import java.util.NoSuchElementException;
 
 @Component
 public class SetupDevUsers implements ApplicationRunner {
-
+/*
     @Autowired
     SpecialUserRepository specialUserRepository;
-
+*/
 
     UserWithRolesRepository userWithRolesRepository;
     RoleRepository roleRepository;
@@ -74,11 +74,11 @@ public class SetupDevUsers implements ApplicationRunner {
         userWithRolesRepository.save(user3);
         userWithRolesRepository.save(user4);
 
-        SpecialUser specialUser =
+        /*SpecialUser specialUser =
                 new SpecialUser("specialUser",pwEncoder.encode(passwordUsedByAll),"s@a.dk","Anders","Hansen","Lyngby vej 23","2800","Lyngby");
         specialUser.addRole(roleUser);
         specialUserRepository.save(specialUser);
-
+*/
 
     }
 }

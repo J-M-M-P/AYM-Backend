@@ -1,5 +1,5 @@
 -- CREATE DATABASE IF NOT EXISTS aym_db;
-USE aym_db;
+USE aym;
 
 -- Colors
 INSERT INTO color (color_name) VALUES ('blue');
