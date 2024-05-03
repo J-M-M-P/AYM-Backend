@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Set;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -23,22 +25,24 @@ public class Product {
     private double discountPrice;
 
     // Foreign key CATEGORY
-//    @OneToMany(mappedBy = "products")
-//    private Set<JewelCategory> jewelCategory;
-//
-//    // Foreign key relation til COLOR
-//    @OneToMany(mappedBy = "products")
-//    private Set<Color> color;
-//
-//    // Foreign key relation til MATERIAL
-//    @OneToMany(mappedBy = "products")
-//    private Set<Material> material;
-//
-//    @ManyToMany(mappedBy = "")
-//
-//    // Many to many relation til order entitet
-//    @ManyToMany(mappedBy = "orders")
-//    private Set<Order> order;
+    @OneToMany(mappedBy = "products")
+    private Set<Category> category;
+
+    // Foreign key relation til COLOR
+    @OneToMany(mappedBy = "products")
+    private Set<Color> color;
+
+    // Foreign key relation til MATERIAL
+    @OneToMany(mappedBy = "products")
+    private Set<Material> material;
+
+    // many to many relation til size entitet
+    @ManyToMany(mappedBy = "size")
+    private Set<Size> size;
+
+    // Many to many relation til order entitet
+    @ManyToMany(mappedBy = "orders")
+    private Set<Order> order;
 
 
     public String toString() {
