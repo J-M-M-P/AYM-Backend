@@ -1,5 +1,6 @@
 package dat3.product.controller;
 
+import dat3.product.dto.ProductDto;
 import dat3.product.entity.Product;
 import dat3.product.repository.ProductRepository;
 import dat3.product.service.ProductService;
@@ -19,30 +20,29 @@ import java.util.Optional;
 @RequestMapping("/products")
 public class ProductController {
 
-//    @Autowired
-//    ProductRepository productRepository;
-
     private final ProductService productService;
 
     @Autowired
     public ProductController(ProductService productService) {
-        this.productService = productService; //explain this part
+        this.productService = productService;
     }
 
+    //GET ALL
     @GetMapping
-    public List<Product> getProducts() {
+    public List<ProductDto> getProducts() {
         return productService.getAllProducts();
     }
 
+    //GET ID
     @GetMapping("/{id}")
-    public Product getProductById(@PathVariable int id) {
-        return productService.getProductById(id)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Product not found!"));
+    public ProductDto getProductById(@PathVariable int id) {
+        return productService.getProductById(id);
     }
 
-//    @PutMapping("/{id}")
-//    public ResponseEntity<Product> updateProduct(@PathVariable int id, @RequestBody Product productUpdated) {
-//
-//    }
+    // UPDATE
+    @PutMapping("/{id}")
+    public ProductDto updateProduct(@PathVariable int id, @RequestBody ProductDto request) {
+        return productService.updateProduct(id, request);
+    }
 
 }
