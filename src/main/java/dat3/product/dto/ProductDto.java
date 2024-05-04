@@ -11,7 +11,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL) // fjerner null values fra dto'ens json data
 public class ProductDto {
-    private int id;
+    private Integer id;
     private String name;
     private double price;
     private String image;

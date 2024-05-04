@@ -5,6 +5,7 @@ import dat3.product.entity.Product;
 import dat3.product.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -31,6 +32,19 @@ public class ProductService {
         return new ProductDto(product);
     }
 
+    // CREATE
+    public ProductDto createProduct(ProductDto request) {
+        if (request.getId() != null) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Id property is automatic and cannot be provided when creating a new product");
+        }
+
+        Product newProduct = new Product();
+
+        editProduct(newProduct, request);
+        productRepository.save(newProduct);
+        return new ProductDto(newProduct);
+    }
+
     // UPDATE
     public ProductDto updateProduct(int id, ProductDto request) {
         if (request.getId() != id) {
@@ -42,7 +56,6 @@ public class ProductService {
 
         editProduct(productToUpdate, request);
 
-//        Product updatedProduct = productRepository.save(productToUpdate);
         productRepository.save(productToUpdate);
         return new ProductDto(productToUpdate);
     }
@@ -56,13 +69,10 @@ public class ProductService {
         original.setDiscountPrice(p.getDiscountPrice());
     }
 
-    // CREATE
-    public void createProduct(Product newProduct) {
-        productRepository.save(newProduct);
-    }
-
     // DELETE
-    public void deleteProduct(int id) {
-        productRepository.deleteById(id);
+    public ResponseEntity deleteProduct(int id) {
+        Product product = productRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Product does not exist"));
+        productRepository.delete(product);
+        return new ResponseEntity(HttpStatus.NOT_FOUND);
     }
 }

@@ -39,10 +39,22 @@ public class ProductController {
         return productService.getProductById(id);
     }
 
+    // POST
+    @PostMapping()
+    public ProductDto createProduct(@RequestBody ProductDto request) {
+        return productService.createProduct(request);
+    }
+
     // UPDATE
     @PutMapping("/{id}")
     public ProductDto updateProduct(@PathVariable int id, @RequestBody ProductDto request) {
         return productService.updateProduct(id, request);
+    }
+
+    // DELETE
+    @DeleteMapping("/{id}")
+    public ResponseEntity deleteProduct(@PathVariable int id) {
+        return productService.deleteProduct(id);
     }
 
 }
