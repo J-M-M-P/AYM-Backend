@@ -13,3 +13,6 @@ INSERT INTO material (name) VALUES ('silver');
 INSERT INTO size (size_name) VALUES ('large');
 INSERT INTO size (size_name) VALUES ('small');
 
+-- Categories
+INSERT INTO category (name) VALUES ('ring');
+INSERT INTO category (name) VALUES ('necklace');

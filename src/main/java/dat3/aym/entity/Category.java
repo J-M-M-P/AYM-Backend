@@ -12,9 +12,9 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @Entity
-public class Color {
+public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String colorName;
+    private String name;
 }
