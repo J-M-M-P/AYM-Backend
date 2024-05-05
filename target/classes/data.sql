@@ -5,7 +5,11 @@ USE aym;
 INSERT INTO color (color_name) VALUES ('blue');
 INSERT INTO color (color_name) VALUES ('red');
 
--- Material
+-- Materials
 INSERT INTO material (name) VALUES ('gold');
 INSERT INTO material (name) VALUES ('silver');
+
+-- Sizes
+INSERT INTO size (size_name) VALUES ('large');
+INSERT INTO size (size_name) VALUES ('small');
 
