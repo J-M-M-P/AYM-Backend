@@ -9,7 +9,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-@JsonInclude(JsonInclude.Include.NON_NULL) // fjerner null values fra dto'ens json data
+@JsonInclude(JsonInclude.Include.NON_NULL) // Removes all properties with null values
 public class ProductDto {
     private Integer id;
     private String name;

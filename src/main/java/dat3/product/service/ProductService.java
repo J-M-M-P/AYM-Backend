@@ -60,6 +60,7 @@ public class ProductService {
         return new ProductDto(productToUpdate);
     }
 
+    // Edit method used in CREATE & UPDATE
     public void editProduct(Product original, ProductDto p) {
         original.setName(p.getName());
         original.setPrice(p.getPrice());
