@@ -1,4 +1,6 @@
-package dat3.recipe.service;
+// HELE FIL SLETTES
+
+/*package dat3.recipe.service;
 
 import dat3.recipe.entity.Category;
 import dat3.recipe.repository.CategoryRepository;
@@ -79,3 +81,4 @@ public class RecipeService {
 
 
 }
+*/
