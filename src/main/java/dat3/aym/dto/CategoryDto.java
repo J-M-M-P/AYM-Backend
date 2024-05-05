@@ -1,7 +1,6 @@
 package dat3.aym.dto;
 
 import dat3.aym.entity.Category;
-import dat3.aym.entity.Color;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

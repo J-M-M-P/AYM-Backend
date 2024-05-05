@@ -1,11 +1,8 @@
 package dat3.aym.service;
 
 import dat3.aym.dto.CategoryDto;
-import dat3.aym.dto.ColorDto;
 import dat3.aym.entity.Category;
-import dat3.aym.entity.Color;
 import dat3.aym.repository.CategoryRepository;
-import dat3.aym.repository.ColorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;

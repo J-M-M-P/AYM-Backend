@@ -1,10 +1,7 @@
 package dat3.aym.controller;
 
-import dat3.aym.dto.ColorDto;
 import dat3.aym.dto.MaterialDto;
-import dat3.aym.entity.Color;
 import dat3.aym.entity.Material;
-import dat3.aym.repository.MaterialRepository;
 import dat3.aym.service.MaterialService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

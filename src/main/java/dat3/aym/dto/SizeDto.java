@@ -1,6 +1,5 @@
 package dat3.aym.dto;
 
-import dat3.aym.entity.Color;
 import dat3.aym.entity.Size;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
