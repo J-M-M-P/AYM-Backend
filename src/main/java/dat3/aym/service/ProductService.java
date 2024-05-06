@@ -67,6 +67,8 @@ public class ProductService {
         original.setQty(p.getQty());
         original.setOnSale(p.isOnSale());
         original.setDiscountPrice(p.getDiscountPrice());
+        original.setCategories(p.getCategories());
+        original.setColors(p.getColors());
     }
 
     // DELETE
