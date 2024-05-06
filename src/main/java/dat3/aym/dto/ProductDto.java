@@ -1,7 +1,7 @@
-package dat3.product.dto;
+package dat3.aym.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import dat3.product.entity.Product;
+import dat3.aym.entity.Product;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

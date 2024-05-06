@@ -1,4 +1,4 @@
-package dat3.product.entity;
+package dat3.aym.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;

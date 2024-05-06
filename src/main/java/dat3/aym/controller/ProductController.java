@@ -1,19 +1,12 @@
-package dat3.product.controller;
+package dat3.aym.controller;
 
-import dat3.product.dto.ProductDto;
-import dat3.product.entity.Product;
-import dat3.product.repository.ProductRepository;
-import dat3.product.service.ProductService;
+import dat3.aym.dto.ProductDto;
+import dat3.aym.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
-import java.util.Optional;
 
 
 @RestController

@@ -1,6 +1,6 @@
-package dat3.product.repository;
+package dat3.aym.repository;
 
-import dat3.product.entity.Product;
+import dat3.aym.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ProductRepository extends JpaRepository<Product, Integer> {
