@@ -19,3 +19,7 @@ INSERT INTO size (size_name) VALUES ('small');
 -- Categories
 INSERT INTO category (name) VALUES ('ring');
 INSERT INTO category (name) VALUES ('necklace');
+
+-- News
+INSERT INTO news (created, headline, content, image) VALUES (NOW(), "Udsalg", "Fra 15/6-2024 - 22/-6-2024 sætter vi priserne ned på alle vores smykker", "Image 1");
+INSERT INTO news (created, headline, content, image) VALUES (NOW(), "Lagersalg", "Gør et kup lørdag den 20/7-2024, da vi holder stort lagersalg på Vesterbro i København", "Image 2");
