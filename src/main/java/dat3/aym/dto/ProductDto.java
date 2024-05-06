@@ -1,9 +1,7 @@
 package dat3.aym.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import dat3.aym.entity.Category;
-import dat3.aym.entity.Color;
-import dat3.aym.entity.Product;
+import dat3.aym.entity.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -24,6 +22,8 @@ public class ProductDto {
     private double discountPrice;
     private Set<Category> categories;
     private Set<Color> colors;
+    private Set<Material> materials;
+    private Set<Size> sizes;
 
     public ProductDto(Product p) {
         this.id = p.getId();
@@ -35,5 +35,7 @@ public class ProductDto {
         this.discountPrice = p.getDiscountPrice();
         this.categories = p.getCategories();
         this.colors = p.getColors();
+        this.materials = p.getMaterials();
+        this.sizes = p.getSizes();
     }
 }

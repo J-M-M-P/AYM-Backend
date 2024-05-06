@@ -37,6 +37,18 @@ public class Product {
             inverseJoinColumns = @JoinColumn(name = "color_id"))
     private Set<Color> colors = new HashSet<>();
 
+    @ManyToMany
+    @JoinTable(name = "product_material",
+            joinColumns = @JoinColumn(name = "product_id"),
+            inverseJoinColumns = @JoinColumn(name = "material_id"))
+    private Set<Material> materials = new HashSet<>();
+
+    @ManyToMany
+    @JoinTable(name = "product_size",
+            joinColumns = @JoinColumn(name = "product_id"),
+            inverseJoinColumns = @JoinColumn(name = "size_id"))
+    private Set<Size> sizes = new HashSet<>();
+
 //    // Foreign key relation til MATERIAL
 //    @OneToMany(mappedBy = "products")
 //    private Set<Material> material;
