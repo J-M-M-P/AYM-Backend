@@ -1,4 +1,6 @@
-package dat3.recipe.dto;
+// HELE FIL SLETTES
+
+/*package dat3.recipe.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import dat3.recipe.entity.Category;
@@ -28,3 +30,4 @@ public class CategoryDto {
         }
     }
 }
+ */

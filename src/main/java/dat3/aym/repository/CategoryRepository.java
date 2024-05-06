@@ -1,0 +1,7 @@
+package dat3.aym.repository;
+
+import dat3.aym.entity.Category;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CategoryRepository extends JpaRepository<Category, Integer> {
+}

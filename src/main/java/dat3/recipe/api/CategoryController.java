@@ -1,4 +1,6 @@
-package dat3.recipe.api;
+// HELE FIL SLETTES
+
+/*package dat3.recipe.api;
 
 import dat3.recipe.dto.CategoryDto;
 import dat3.recipe.service.CategoryService;
@@ -28,3 +30,4 @@ public class CategoryController {
         return categoryService.addCategory(request);
     }
 }
+*/

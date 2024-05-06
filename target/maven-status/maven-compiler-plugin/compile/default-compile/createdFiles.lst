@@ -3,7 +3,9 @@ dat3\recipe\api\RecipeController.class
 dat3\security\service\UserWithRolesService.class
 dat3\security\dto\LoginRequest.class
 dat3\security\api\AuthenticationController.class
+dat3\aym\repository\ColorRepository.class
 dat3\security\repository\RoleRepository.class
+dat3\aym\entity\Color.class
 dat3\recipe\dto\RecipeDto.class
 dat3\security\repository\UserWithRolesRepository.class
 dat3\security\dto\UserWithRolesResponse.class
@@ -16,6 +18,7 @@ dat3\security\error\CustomOAuth2AccessDeniedHandler.class
 dat3\controller\InfoResponse.class
 dat3\security\for_security_tests\TestResponse.class
 dat3\security\for_security_tests\ControllerToTestRoles.class
+dat3\aym\dto\ColorDto.class
 dat3\recipe\entity\Recipe.class
 dat3\recipe\dto\CategoryDto.class
 dat3\recipe\entity\Category.class
@@ -25,6 +28,7 @@ dat3\security\config\SecurityConfig.class
 dat3\recipe\configuration\PasswordHashingExercise.class
 dat3\controller\DemoController.class
 dat3\recipe\repository\CategoryRepository.class
+dat3\aym\service\ColorService.class
 dat3\recipe\entity\SpecialUser.class
 dat3\recipe\service\CategoryService.class
 dat3\security\config\CorsConfig.class

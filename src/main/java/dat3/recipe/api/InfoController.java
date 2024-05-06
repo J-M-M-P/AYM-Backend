@@ -1,4 +1,6 @@
-package dat3.recipe.api;
+// HELE FIL SLETTES
+
+/*package dat3.recipe.api;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,3 +19,4 @@ public class InfoController {
                 "}";
     }
 }
+*/

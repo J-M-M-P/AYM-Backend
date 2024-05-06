@@ -1,4 +1,6 @@
-package dat3.recipe.api;
+// HELE FIL SLETTES
+
+/*package dat3.recipe.api;
 
 import dat3.recipe.entity.Recipe;
 import dat3.recipe.service.RecipeService;
@@ -51,3 +53,4 @@ public class RecipeController {
 
 
 }
+*/

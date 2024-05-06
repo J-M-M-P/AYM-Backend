@@ -1,4 +1,6 @@
-package dat3.recipe.entity;
+// HELE FIL SLETTES
+
+/*package dat3.recipe.entity;
 
 import dat3.security.entity.UserWithRoles;
 import jakarta.persistence.Entity;
@@ -27,3 +29,4 @@ public class SpecialUser extends UserWithRoles {
         this.zipCode = zipCode;
     }
 }
+*/

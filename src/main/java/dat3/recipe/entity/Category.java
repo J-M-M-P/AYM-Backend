@@ -1,4 +1,6 @@
-package dat3.recipe.entity;
+// HELE FIL SLETTES
+
+/*package dat3.recipe.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -40,3 +42,4 @@ public class Category  {
         this.name = name;
     }
 }
+*/

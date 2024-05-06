@@ -1,3 +1,6 @@
+// HELE FIL SLETTES
+
+/*
 package dat3.recipe.entity;
 
 import jakarta.persistence.*;
@@ -43,3 +46,4 @@ public class Recipe {
     }
 }
 
+*/
