@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Getter
@@ -20,18 +21,34 @@ public class Product {
     private String name;
     private double price;
     private String image;
-    private int qty; // Ændret amount fra ER-dia til qty(quantity)
+    private int qty;
     private boolean onSale;
     private double discountPrice;
 
-    // Foreign key CATEGORY
-//    @OneToMany(mappedBy = "products")
-//    private Set<Category> category;
-//
-//    // Foreign key relation til COLOR
-//    @OneToMany(mappedBy = "products")
-//    private Set<Color> color;
-//
+    @ManyToMany
+    @JoinTable(name = "product_category",
+            joinColumns = @JoinColumn(name = "product_id"),
+            inverseJoinColumns = @JoinColumn(name = "category_id"))
+    private Set<Category> categories = new HashSet<>();
+
+    @ManyToMany
+    @JoinTable(name = "product_color",
+            joinColumns = @JoinColumn(name = "product_id"),
+            inverseJoinColumns = @JoinColumn(name = "color_id"))
+    private Set<Color> colors = new HashSet<>();
+
+    @ManyToMany
+    @JoinTable(name = "product_material",
+            joinColumns = @JoinColumn(name = "product_id"),
+            inverseJoinColumns = @JoinColumn(name = "material_id"))
+    private Set<Material> materials = new HashSet<>();
+
+    @ManyToMany
+    @JoinTable(name = "product_size",
+            joinColumns = @JoinColumn(name = "product_id"),
+            inverseJoinColumns = @JoinColumn(name = "size_id"))
+    private Set<Size> sizes = new HashSet<>();
+
 //    // Foreign key relation til MATERIAL
 //    @OneToMany(mappedBy = "products")
 //    private Set<Material> material;
