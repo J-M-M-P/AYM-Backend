@@ -5,6 +5,7 @@ USE aym;
 INSERT INTO products (name, price, image, qty, on_sale, discount_price) VALUES ('ANABELLE', 350, 'noImageForNow', 2, false, 315);
 INSERT INTO products (name, price, image, qty, on_sale, discount_price) VALUES ('MATILDA', 650, 'noImageForNow', 3, false, 585);
 INSERT INTO products (name, price, image, qty, on_sale, discount_price) VALUES ('MARTHA', 250, 'noImageForNow', 5, false, 225);
+INSERT INTO products (name, price, image, qty, on_sale, discount_price) VALUES ('FREJA', 1500, 'noImageForNow', 11, true, 200);
 
 -- Colors
 INSERT INTO color (color_name) VALUES ('HAVANA BROWN');
@@ -46,3 +47,7 @@ INSERT INTO category (name) VALUES ('earring');
 INSERT INTO product_category (product_id, category_id) VALUES (1, 1); -- ANNABELLE is associated with ring category
 INSERT INTO product_category (product_id, category_id) VALUES (2, 2); -- MATILDA is associated with necklace category
 INSERT INTO product_category (product_id, category_id) VALUES (3, 3); -- MARTHA is associated with necklace category
+
+-- News
+INSERT INTO news (created, headline, content, image) VALUES (NOW(), "Udsalg", "Fra 15/6-2024 - 22/-6-2024 sætter vi priserne ned på alle vores smykker", "Image 1");
+INSERT INTO news (created, headline, content, image) VALUES (NOW(), "Lagersalg", "Gør et kup lørdag den 20/7-2024, da vi holder stort lagersalg på Vesterbro i København", "Image 2");
