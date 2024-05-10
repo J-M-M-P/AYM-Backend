@@ -49,19 +49,6 @@ public class Product {
             inverseJoinColumns = @JoinColumn(name = "size_id"))
     private Set<Size> sizes = new HashSet<>();
 
-//    // Foreign key relation til MATERIAL
-//    @OneToMany(mappedBy = "products")
-//    private Set<Material> material;
-//
-//    // many to many relation til size entitet
-//    @ManyToMany(mappedBy = "size")
-//    private Set<Size> size;
-//
-//    // Many to many relation til order entitet
-//    @ManyToMany(mappedBy = "orders")
-//    private Set<Order> order;
-
-
     public String toString() {
         return "Product{" +
                 "Id: " + id +
