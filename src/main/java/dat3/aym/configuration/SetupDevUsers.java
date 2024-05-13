@@ -1,4 +1,4 @@
-package dat3.configuration;
+package dat3.aym.configuration;
 
 import dat3.security.entity.Role;
 import dat3.security.entity.UserWithRoles;
