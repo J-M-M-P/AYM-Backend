@@ -16,7 +16,7 @@ import java.util.Set;
 @NoArgsConstructor
 @Entity
 @Table(name = "orders")
-public class Order {
+public class OrderEntity {
 
  @Id
  @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,12 +25,12 @@ public class Order {
 
  @ManyToOne
  @JoinColumn(name = "customer_user_name")
- private UserWithRoles userName;
- private boolean isShipped;
+ private UserWithRoles user;
+ private Boolean isShipped;
 
  @ManyToMany
  @JoinTable(name = "product_order_order",
          joinColumns = @JoinColumn(name = "order_id"),
          inverseJoinColumns = @JoinColumn(name = "product_order_id"))
- private Set<Category> product_order = new HashSet<>();
+ private Set<Category> ProductOrder = new HashSet<>();
 }

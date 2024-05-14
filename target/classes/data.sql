@@ -51,3 +51,16 @@ INSERT INTO product_category (product_id, category_id) VALUES (3, 3); -- MARTHA 
 -- News
 INSERT INTO news (created, headline, content, image) VALUES (NOW(), "Udsalg", "Fra 15/6-2024 - 22/-6-2024 sætter vi priserne ned på alle vores smykker", "Image 1");
 INSERT INTO news (created, headline, content, image) VALUES (NOW(), "Lagersalg", "Gør et kup lørdag den 20/7-2024, da vi holder stort lagersalg på Vesterbro i København", "Image 2");
+
+-- Orders
+-- INSERT INTO orders (created, customer_user_name, is_shipped) VALUES ('2024-05-14 20:03:32.000000', 'user1', true);
+-- INSERT INTO orders (created, customer_user_name, is_shipped) VALUES ('2023-03-24 10:23:03.000000', 'user3', false);
+-- INSERT INTO orders (created, customer_user_name, is_shipped) VALUES ('2024-12-20 08:45:44.000000', 'user2', false);
+
+
+-- Product-Order associations
+--INSERT INTO product_order (product_id_fk, qty, order_id_fk) VALUES (3, 13, 1); -- ANNABELLE is associated with ring category
+--INSERT INTO product_order (product_id, qty, order_id_fk) VALUES (1, 12, 2); -- MATILDA is associated with necklace category
+--INSERT INTO product_order (product_id, qty, order_id_fk) VALUES (2, 13, 3); -- MARTHA is associated with necklace category
+
+-- ProductOrder

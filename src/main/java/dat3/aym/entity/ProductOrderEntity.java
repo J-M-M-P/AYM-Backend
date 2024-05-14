@@ -9,14 +9,14 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @Entity
-public class ProductOrder {
+public class ProductOrderEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private int qty;
     @ManyToOne
     @JoinColumn(name = "order_id_fk")
-    private Order order;
+    private OrderEntity orderEntity;
     @ManyToOne
     @JoinColumn(name = "product_id_fk")
     private Product product;
