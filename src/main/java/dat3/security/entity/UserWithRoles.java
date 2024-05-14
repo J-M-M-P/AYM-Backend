@@ -43,6 +43,10 @@ public class UserWithRoles implements UserDetails {
 
   private boolean businessCustomer;
 
+  @Column(unique = true)
+  private int customerNumber;
+  private static int lastCustomerNumber = 0;
+
   private boolean enabled = true;
 
   @CreationTimestamp
@@ -65,6 +69,14 @@ public class UserWithRoles implements UserDetails {
     setPassword(password);
     this.email = email;
     this.businessCustomer = businessCustomer;
+  }
+
+  @PrePersist
+  protected void generateCustomerNumber() {
+    // Increment the last used customer number
+    lastCustomerNumber++;
+    // Set the customer number for the current entity
+    this.customerNumber = lastCustomerNumber;
   }
 
   public void setPassword(String pw){
