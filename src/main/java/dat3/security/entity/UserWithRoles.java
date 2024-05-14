@@ -41,7 +41,9 @@ public class UserWithRoles implements UserDetails {
   @Column(nullable = false, length = 60)
   String password;
 
-  private boolean enabled= true;
+  private boolean businessCustomer;
+
+  private boolean enabled = true;
 
   @CreationTimestamp
   private LocalDateTime created;
@@ -58,10 +60,11 @@ public class UserWithRoles implements UserDetails {
 
   public UserWithRoles() {}
 
-  public UserWithRoles(String user, String password, String email){
+  public UserWithRoles(String user, String password, String email, boolean businessCustomer){
     this.username = user;
     setPassword(password);
     this.email = email;
+    this.businessCustomer = businessCustomer;
   }
 
   public void setPassword(String pw){
