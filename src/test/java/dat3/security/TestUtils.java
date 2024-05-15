@@ -16,10 +16,10 @@ public class TestUtils {
     Role adminRole = new Role("ADMIN");
     roleRes.save(userRole);
     roleRes.save(adminRole);
-    UserWithRoles user1 = new UserWithRoles("u1", pwEn.encode(pw), "u1@a.dk");
-    UserWithRoles user2 = new UserWithRoles("u2", pwEn.encode(pw), "u2@a.dk");
-    UserWithRoles user3 = new UserWithRoles("u3", pwEn.encode(pw), "u3@a.dk");
-    UserWithRoles userNoRoles = new UserWithRoles("u4", pwEn.encode(pw), "u4@a.dk");
+    UserWithRoles user1 = new UserWithRoles("u1", pwEn.encode(pw), "u1@a.dk", true);
+    UserWithRoles user2 = new UserWithRoles("u2", pwEn.encode(pw), "u2@a.dk", true);
+    UserWithRoles user3 = new UserWithRoles("u3", pwEn.encode(pw), "u3@a.dk", false);
+    UserWithRoles userNoRoles = new UserWithRoles("u4", pwEn.encode(pw), "u4@a.dk", false);
     user1.addRole(userRole);
     user1.addRole(adminRole);
     user2.addRole(userRole);

@@ -4,6 +4,7 @@ import dat3.security.dto.UserWithRolesRequest;
 import dat3.security.dto.UserWithRolesResponse;
 import dat3.security.service.UserWithRolesService;
 import io.swagger.v3.oas.annotations.Operation;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,6 +25,14 @@ public class UserWithRoleController {
              description = "If a default role is defined (app.default-role ), this role will be assigned to the user.")
   public UserWithRolesResponse addUserWithRoles(@RequestBody UserWithRolesRequest request) {
     return userWithRolesService.addUserWithRoles(request);
+  }
+
+  //Take care with this. This should NOT be something everyone can call
+  @PreAuthorize("hasAuthority('ADMIN')")
+  @DeleteMapping("/remove-user/{username}")
+  @Operation(summary = "Remove a UserWithRoles", description = "Caller must be authenticated with the role ADMIN")
+  public ResponseEntity<String> removeUserWithRoles(@PathVariable String username) {
+    return userWithRolesService.removeUserWithRoles(username);
   }
 
   //Take care with this. This should NOT be something everyone can call
