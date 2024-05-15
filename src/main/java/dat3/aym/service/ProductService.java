@@ -77,6 +77,6 @@ public class ProductService {
     public ResponseEntity deleteProduct(int id) {
         Product product = productRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Product does not exist"));
         productRepository.delete(product);
-        return new ResponseEntity(HttpStatus.NOT_FOUND);
+        return new ResponseEntity(HttpStatus.OK);
     }
 }

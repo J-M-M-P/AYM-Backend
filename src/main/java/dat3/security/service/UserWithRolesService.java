@@ -7,11 +7,15 @@ import dat3.security.entity.UserWithRoles;
 import dat3.security.repository.RoleRepository;
 import dat3.security.repository.UserWithRolesRepository;
 import jakarta.annotation.PostConstruct;
+import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
+
+import java.util.Optional;
 
 @Service
 public class UserWithRolesService {
@@ -95,6 +99,16 @@ public class UserWithRolesService {
     UserWithRoles userWithRoles = new UserWithRoles(body.getUsername(), passwordEncoder.encode(pw), body.getEmail(), body.isBusinessCustomer());
     setDefaultRole(userWithRoles);
     return new UserWithRolesResponse(userWithRolesRepository.save(userWithRoles));
+  }
+
+  public ResponseEntity<String> removeUserWithRoles(String username) {
+    UserWithRoles userWithRolesToRemove = userWithRolesRepository.findById(username).orElseThrow(() ->
+            new ResponseStatusException(HttpStatus.NOT_FOUND, "username does not exist"));
+    userWithRolesRepository.delete(userWithRolesToRemove);
+
+    String msg = "User with username " + username + " was removed!";
+
+    return ResponseEntity.ok().body(msg);
   }
 
   private void setDefaultRole(UserWithRoles userWithRoles) {
