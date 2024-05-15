@@ -15,14 +15,13 @@ public class OrderDto {
     private int id;
     private LocalDateTime created;
     private Boolean isShipped;
-    private String username; // Brugernavn i stedet for brugerobjektet
-    //private UserWithRoles user; // Hvis du vil inkludere hele brugerobjektet
+    private String username;
+    private
 
     public OrderDto(OrderEntity o) {
         this.id = o.getId();
         this.created = o.getCreated();
         this.isShipped = o.getIsShipped();
-        this.username = o.getUser().getUsername(); // Få brugernavnet
-        //this.user = o.getUserName(); // Hvis du vil inkludere hele brugerobjektet
+        this.username = o.getUser().getUsername(); // Get username
     }
 }
