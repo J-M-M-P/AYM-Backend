@@ -13,13 +13,15 @@ import lombok.Setter;
 public class OrderLineDto {
     private int id;
     private int qty;
-    private OrderEntity orderEntity;
+    private int orderId;
+    private String username;
     private Product product;
 
     public OrderLineDto (OrderLine o){
         this.id = o.getId();
         this.qty = o.getQty();
-        this.orderEntity = o.getOrderEntity();
+        this.orderId = o.getOrderEntity().getId();
+        this.username = o.getOrderEntity().getUser().getUsername();
         this.product = o.getProduct();
     }
 }
