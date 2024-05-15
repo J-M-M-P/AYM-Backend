@@ -44,9 +44,9 @@ INSERT INTO category (name) VALUES ('necklace');
 INSERT INTO category (name) VALUES ('earring');
 
 -- Product-Category associations
-INSERT INTO product_category (product_id, category_id) VALUES (1, 1); -- ANNABELLE is associated with ring category
-INSERT INTO product_category (product_id, category_id) VALUES (2, 2); -- MATILDA is associated with necklace category
-INSERT INTO product_category (product_id, category_id) VALUES (3, 3); -- MARTHA is associated with necklace category
+--INSERT INTO product_category (product_id, category_id) VALUES (1, 1); -- ANNABELLE is associated with ring category
+--INSERT INTO product_category (product_id, category_id) VALUES (2, 2); -- MATILDA is associated with necklace category
+--INSERT INTO product_category (product_id, category_id) VALUES (3, 3); -- MARTHA is associated with necklace category
 
 -- News
 INSERT INTO news (created, headline, content, image) VALUES (NOW(), "Udsalg", "Fra 15/6-2024 - 22/-6-2024 sætter vi priserne ned på alle vores smykker", "Image 1");
