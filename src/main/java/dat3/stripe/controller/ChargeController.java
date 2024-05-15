@@ -14,14 +14,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class ChargeController {
 
     @Autowired
-    private StripeService paymentsService;
+    private StripeService stripeService;
 
     @PostMapping("/charge")
     public String charge(ChargeRequest chargeRequest, Model model)
             throws StripeException {
         chargeRequest.setDescription("Example charge");
         chargeRequest.setCurrency(ChargeRequest.Currency.DKK);
-        Charge charge = paymentsService.charge(chargeRequest);
+        Charge charge = stripeService.charge(chargeRequest);
         model.addAttribute("id", charge.getId());
         model.addAttribute("status", charge.getStatus());
         model.addAttribute("chargeId", charge.getId());
