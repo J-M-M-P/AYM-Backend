@@ -8,29 +8,22 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
-import java.util.HashSet;
-import java.util.Set;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "orders")
+@Table(name = "order_entity")
 public class OrderEntity {
 
  @Id
  @GeneratedValue(strategy = GenerationType.IDENTITY)
  private int id;
  private LocalDateTime created;
+ private boolean isShipped;
 
  @ManyToOne
- @JoinColumn(name = "customer_user_name")
+ @JoinColumn(name = "username")
  private UserWithRoles user;
- private Boolean isShipped;
 
- @ManyToMany
- @JoinTable(name = "product_order_order",
-         joinColumns = @JoinColumn(name = "order_id"),
-         inverseJoinColumns = @JoinColumn(name = "product_order_id"))
- private Set<Category> ProductOrder = new HashSet<>();
 }
