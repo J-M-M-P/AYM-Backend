@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @Entity
-public class ProductOrderEntity {
+public class OrderLine {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
