@@ -53,7 +53,7 @@ INSERT INTO news (created, headline, content, image) VALUES (NOW(), "Udsalg", "F
 INSERT INTO news (created, headline, content, image) VALUES (NOW(), "Lagersalg", "Gør et kup lørdag den 20/7-2024, da vi holder stort lagersalg på Vesterbro i København", "Image 2");
 
 -- Orders
--- INSERT INTO order_entity (created, username, is_shipped) VALUES (NOW(), 'user1', false);
+-- INSERT INTO order_entity (created, username, is_shipped) VALUES ("2024-08-15T22:37:36", "user1", false);
 -- INSERT INTO order_entity (created, customer_user_name, is_shipped) VALUES (NOW(), 'user1', true);
 -- INSERT INTO order_entity (created, username, is_shipped) VALUES (NOW(), 'user3', false);
 -- INSERT INTO order_entity (created, customer_user_name, is_shipped) VALUES (NOW(), 'user2', false);

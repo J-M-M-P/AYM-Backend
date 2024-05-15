@@ -1,8 +1,6 @@
 package dat3.aym.service;
 
-import dat3.aym.dto.CategoryDto;
 import dat3.aym.dto.OrderLineDto;
-import dat3.aym.entity.Category;
 import dat3.aym.entity.OrderLine;
 import dat3.aym.repository.OrderLineRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,11 +57,11 @@ public class OrderLineService {
             OrderLine existingOrderLine = existingOrderLineOptional.get();
             existingOrderLine.setQty(updatedOrderLine.getQty());
 
-            // Save updated color in database
+            // Save updated orderline in database
             return orderLineRepository.save(existingOrderLine);
         } else {
-            // If color does not exist in database, throw error
-            throw new RuntimeException("Category with ID: " + orderLineId + " not found");
+            // If orderline does not exist in database, throw error
+            throw new RuntimeException("Orderline with ID: " + orderLineId + " not found");
         }
     }
 

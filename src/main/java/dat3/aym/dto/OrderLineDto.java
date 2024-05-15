@@ -1,6 +1,5 @@
 package dat3.aym.dto;
 
-import dat3.aym.entity.OrderEntity;
 import dat3.aym.entity.OrderLine;
 import dat3.aym.entity.Product;
 import lombok.Getter;

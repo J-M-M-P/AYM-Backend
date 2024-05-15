@@ -1,9 +1,7 @@
 package dat3.aym.service;
 
 import dat3.aym.dto.OrderDto;
-import dat3.aym.dto.OrderLineDto;
 import dat3.aym.entity.OrderEntity;
-import dat3.aym.entity.OrderLine;
 import dat3.aym.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

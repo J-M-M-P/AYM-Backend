@@ -1,8 +1,6 @@
 package dat3.aym.controller;
 
-import dat3.aym.dto.CategoryDto;
 import dat3.aym.dto.OrderLineDto;
-import dat3.aym.entity.Category;
 import dat3.aym.entity.OrderLine;
 import dat3.aym.service.OrderLineService;
 import org.springframework.beans.factory.annotation.Autowired;

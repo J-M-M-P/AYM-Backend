@@ -1,7 +1,6 @@
 package dat3.aym.dto;
 
 import dat3.aym.entity.OrderEntity;
-import dat3.security.entity.UserWithRoles;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
