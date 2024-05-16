@@ -14,6 +14,8 @@ public class OrderLine {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private int qty;
+    private String color;
+    private String size;
     @ManyToOne
     @JoinColumn(name = "order_id_fk")
     private OrderEntity orderEntity;

@@ -54,14 +54,7 @@ INSERT INTO news (created, headline, content, image) VALUES (NOW(), "Lagersalg",
 
 -- Orders
 -- INSERT INTO order_entity (created, username, is_shipped) VALUES ("2024-08-15T22:37:36", "user1", false);
--- INSERT INTO order_entity (created, customer_user_name, is_shipped) VALUES (NOW(), 'user1', true);
+-- INSERT INTO order_entity (created, username, is_shipped) VALUES (NOW(), 'user1', true);
 -- INSERT INTO order_entity (created, username, is_shipped) VALUES (NOW(), 'user3', false);
--- INSERT INTO order_entity (created, customer_user_name, is_shipped) VALUES (NOW(), 'user2', false);
+-- INSERT INTO order_entity (created, username, is_shipped) VALUES (NOW(), 'user2', false);
 
-
--- Product-Order associations
---INSERT INTO product_order (product_id_fk, qty, order_id_fk) VALUES (3, 13, 1); -- ANNABELLE is associated with ring category
---INSERT INTO product_order (product_id, qty, order_id_fk) VALUES (1, 12, 2); -- MATILDA is associated with necklace category
---INSERT INTO product_order (product_id, qty, order_id_fk) VALUES (2, 13, 3); -- MARTHA is associated with necklace category
-
--- ProductOrder
