@@ -15,13 +15,13 @@ public class OrderDto {
     private LocalDateTime created;
     private Boolean isShipped;
     private String username;
-    //private int customerNumber;
+    private int customerNumber;
 
     public OrderDto(OrderEntity o) {
         this.id = o.getId();
         this.created = o.getCreated();
         this.isShipped = o.isShipped();
         this.username = o.getUser().getUsername(); // Get username
-        //this.customerNumber = o.getUser().getCustomerNumber(); not yet implemented in this branch
+        this.customerNumber = o.getUser().getCustomerNumber(); //get customernumber
     }
 }
