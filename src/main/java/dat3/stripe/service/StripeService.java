@@ -3,12 +3,11 @@ package dat3.stripe.service;
 import com.stripe.Stripe;
 import com.stripe.exception.StripeException;
 import com.stripe.model.PaymentIntent;
+import com.stripe.param.PaymentIntentCreateParams;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
-import java.util.HashMap;
-import java.util.Map;
 
 @Service
 public class StripeService {
@@ -21,10 +20,12 @@ public class StripeService {
         Stripe.apiKey = secretKey;
     }
 
-    public String createPaymentIntent(int amount, String currency) throws StripeException {
-        Map<String, Object> params = new HashMap<>();
-        params.put("amount", amount);
-        params.put("currency", currency);
+    public String createPaymentIntent(int amount, String currency, String paymentMethod) throws StripeException {
+        PaymentIntentCreateParams params = new PaymentIntentCreateParams.Builder()
+                .setAmount((long) amount)
+                .setCurrency(currency)
+                .setPaymentMethod(paymentMethod)
+                .build();
 
         PaymentIntent intent = PaymentIntent.create(params);
         return intent.getClientSecret();

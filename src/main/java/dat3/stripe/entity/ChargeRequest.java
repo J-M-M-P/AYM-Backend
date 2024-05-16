@@ -8,9 +8,12 @@ public class ChargeRequest {
     public enum Currency {
         EUR, USD, DKK;
     }
+
     private String description;
     private int amount;
     private Currency currency;
     private String stripeEmail;
     private String stripeToken;
+    private String paymentMethod; // Add payment method
+
 }
