@@ -17,7 +17,7 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer productId;
     private String name;
     private double price;
     private String image;
@@ -51,7 +51,7 @@ public class Product {
 
     public String toString() {
         return "Product{" +
-                "Id: " + id +
+                "Id: " + productId +
                 ", name: " + name + '\'' +
                 ", price: " + price +
                 ", image: " + image + '\'' +
