@@ -13,11 +13,13 @@ public class UserWithRolesResponse {
     String userName;
     List<String> roleNames;
     String email;
+    boolean businessCustomer;
 
     public UserWithRolesResponse(UserWithRoles userWithRoles){
         this.userName = userWithRoles.getUsername();
         this.roleNames = userWithRoles.getRoles().stream().map(role -> role.getRoleName()).toList();
         this.email = userWithRoles.getEmail();
+        this.businessCustomer = userWithRoles.isBusinessCustomer();
     }
 
 }
