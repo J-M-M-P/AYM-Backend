@@ -23,8 +23,8 @@ public class OrderLineDto {
         this.qty = o.getQty();
         this.color = o.getColor();
         this.size = o.getSize();
-        this.orderId = o.getOrderEntity().getId();
-        this.username = o.getOrderEntity().getUser().getUsername();
+        this.orderId = o.getOrder().getOrderId();
+        this.username = o.getOrder().getUser().getUsername();
         this.product = o.getProduct();
     }
 }

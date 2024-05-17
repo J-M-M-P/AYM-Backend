@@ -1,7 +1,7 @@
 package dat3.aym.controller;
 
 import dat3.aym.dto.OrderDto;
-import dat3.aym.entity.OrderEntity;
+import dat3.aym.entity.Order;
 import dat3.aym.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -29,13 +29,13 @@ public class OrderController {
 
     //Post order to database
     @PostMapping("")
-    public OrderEntity addOrder(@RequestBody OrderEntity order) {
+    public Order addOrder(@RequestBody Order order) {
         return orderService.createOrder(order);
     }
 
     //Update order in database
     @PutMapping("/{id}")
-    public OrderEntity updateOrder(@PathVariable int id, @RequestBody OrderEntity order) {
+    public Order updateOrder(@PathVariable int id, @RequestBody Order order) {
         return orderService.updateOrder(id, order);
     }
 

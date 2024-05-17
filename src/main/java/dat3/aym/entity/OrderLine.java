@@ -16,10 +16,12 @@ public class OrderLine {
     private int qty;
     private String color;
     private String size;
+
     @ManyToOne
-    @JoinColumn(name = "order_id_fk")
-    private OrderEntity orderEntity;
+    @JoinColumn(name = "order_id_fk", referencedColumnName = "orderId", nullable = false)
+    private Order order;
+
     @ManyToOne
-    @JoinColumn(name = "product_id_fk")
+    @JoinColumn(name = "product_id_fk", referencedColumnName = "productId", nullable = false)
     private Product product;
 }

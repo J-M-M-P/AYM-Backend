@@ -52,9 +52,16 @@ INSERT INTO product_category (product_id, category_id) VALUES (3, 3); -- MARTHA 
 INSERT INTO news (created, headline, content, image) VALUES (NOW(), "Udsalg", "Fra 15/6-2024 - 22/-6-2024 sætter vi priserne ned på alle vores smykker", "Image 1");
 INSERT INTO news (created, headline, content, image) VALUES (NOW(), "Lagersalg", "Gør et kup lørdag den 20/7-2024, da vi holder stort lagersalg på Vesterbro i København", "Image 2");
 
--- Orders
--- INSERT INTO order_entity (created, username, is_shipped) VALUES ("2024-08-15T22:37:36", "user1", false);
--- INSERT INTO order_entity (created, username, is_shipped) VALUES (NOW(), 'user1', true);
--- INSERT INTO order_entity (created, username, is_shipped) VALUES (NOW(), 'user3', false);
--- INSERT INTO order_entity (created, username, is_shipped) VALUES (NOW(), 'user2', false);
+-- User_With_Roles (ekstra user som gemmes i db før dem der laves i setupDevUsers)
+INSERT INTO user_with_roles (business_customer, customer_number, enabled, created, edited, discriminator_type, email, username, password) VALUES (true, 9999, true, NOW(), NOW(), 'UserWithRoles', 'user5@a.dk', 'user5', '$2a$10$3pSxp3ioPFBpLVuSMVmFJeIbXtas8rolhz4YrQA13eYRr7wITZEKG');
+
+-- Orders (virker kun med ovenstående ekstra user da users i setupDevUsers ikke eksistere i db før orders indsættes via data.sql)
+INSERT INTO order_entity (created, username, is_shipped) VALUES (NOW(), 'user5', true);
+INSERT INTO order_entity (created, username, is_shipped) VALUES (NOW(), 'user5', false);
+INSERT INTO order_entity (created, username, is_shipped) VALUES (NOW(), 'user5', false);
+
+-- OrderLines
+INSERT INTO order_line (order_id_fk, product_id_fk, qty, color, size) VALUES (1, 1, 99, 'blue', 'onesize');
+INSERT INTO order_line (order_id_fk, product_id_fk, qty, color, size) VALUES (1, 2, 99, 'blue', 'onesize');
+INSERT INTO order_line (order_id_fk, product_id_fk, qty, color, size) VALUES (2, 2, 88, 'yellow', 'medium');
 

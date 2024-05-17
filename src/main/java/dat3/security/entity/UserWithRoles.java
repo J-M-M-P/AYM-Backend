@@ -1,5 +1,6 @@
 package dat3.security.entity;
 
+import dat3.aym.entity.Order;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

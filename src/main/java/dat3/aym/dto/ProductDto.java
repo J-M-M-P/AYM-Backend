@@ -26,7 +26,7 @@ public class ProductDto {
     private Set<Size> sizes;
 
     public ProductDto(Product p) {
-        this.id = p.getId();
+        this.id = p.getProductId();
         this.name = p.getName();
         this.price = p.getPrice();
         this.image = p.getImage();
